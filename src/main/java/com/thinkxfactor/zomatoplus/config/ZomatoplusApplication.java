@@ -6,10 +6,11 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication
-@ComponentScan("com.thinkxfactor")
-@EnableJpaRepositories(basePackages = "com.thinkxfactor")
-@EntityScan("com.thinkxfactor")  
+@SpringBootApplication // starting point 
+@ComponentScan("com.thinkxfactor") // search for all the beans in the packages
+@EnableJpaRepositories(basePackages = "com.thinkxfactor") // enables the jpa repo for the base package
+@EntityScan("com.thinkxfactor")  // looks for all the objects that have @Entity above it
+
 public class ZomatoplusApplication {
 	
 	public static void main(String[] args) {

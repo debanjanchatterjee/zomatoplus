@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="css/layout.css" type="text/css">
+	<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+<div class="well">
+	<form novalidate>
+		<table cellpadding="10">
+			<tr>
+				<td>Name</td>
+				<td><input type="text" ng-model="item.name"></td>
+			</tr>
+
+			<tr>
+				<td>Description</td>
+				<td><input type="text" ng-model="item.description"></td>
+			</tr>
+			
+			<tr>
+				<td>Restaurant id</td>
+				<td><input type="text" ng-model="item.restaurant_id"></td>
+			</tr>
+			
+			<tr>
+				<td>Price</td>
+				<td><input type="text" ng-model="item.price"></td>
+			</tr>
+			
+
+			
+
+			<tr>
+				<td><button ng-click="saveItem()">Save Item</button></td>
+			</tr>
+		</table>
+
+	<p>newItem = {{item}}</p>
+
+	<div class="clearfix"></div>
+	<table class="table table-strip table-hover" data-ng-init="fetchItem()">
+
+		<tr style="background-color: #8FBC8F">
+			<td><b>Name</b></td>
+			<td><b>Description</b></td>
+			<td><b>Restaurant id</b></td>
+			<td><b>Price</b></td>
+		</tr>
+		<tr ng-repeat="item in items">
+			<td>{{item.name}}</td>
+			<td>{{item.description}}</td>
+			<td>{{item.restaurant_id}}</td>
+			<td>{{item.price}}</td>
+		</tr>
+	</table>
+
+</div>
+
+
+
+

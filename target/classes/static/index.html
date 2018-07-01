@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-init="lg='glyphicon glyphicon-log-in';lgText='Login'">
+
+<head>
+	<link rel="stylesheet" href="css/layout.css" type="text/css">
+	<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+<link data-require="bootstrap@*" data-semver="3.3.5" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<script data-require="bootstrap@*" data-semver="3.3.5" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script data-require="angular.js@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular.js"></script>
+<script data-require="angular-route@*" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular-route.js"></script>
+<link rel="stylesheet" href="css/style.css" />
+<script src="script.js"></script>
+</head>
+
+<body id="body" class="container">
+<img src="images/logo_wide.png" alt="" height="150" width="100%" class="logo"/><br />
+	<ul class="nav nav-tabs">
+		<li data-toggle="tab"><a href="#/home">Home</a></li>
+		<li><a href="#/restaurants" data-toggle="tab">Restaurants</a></li>
+		<li><a href="#/items" data-toggle="tab">Items</a></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+			<li><a href="#" data-toggle="tab"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			<li><a href="#/login" data-toggle="tab"><span class={{lg}}></span> {{lgText}}</a></li>
+		  </ul>
+	
+	<div id="centered"><h4>{{lgName}}</h4></div>
+		  
+	<div id="centered" ng-view></div>
+	
+
+</body>
+
+</html>
